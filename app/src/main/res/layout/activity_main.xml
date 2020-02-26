@@ -72,6 +72,7 @@
             android:text="AC"
             android:textSize="22sp"
             android:textStyle="bold"
+            android:onClick="clean"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
@@ -111,7 +112,7 @@
             android:text="/"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
+            android:onClick="operators"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
@@ -148,10 +149,10 @@
         <Button
             android:id="@+id/btnMultiple"
             android:background="@android:color/holo_blue_bright"
-            android:text="x"
+            android:text="*"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
+            android:onClick="operators"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
@@ -166,12 +167,12 @@
             app:layout_rowWeight="1" />
 
         <Button
-            android:id="@+id/btnDot"
+            android:id="@+id/btnMinus"
             android:background="@android:color/holo_blue_bright"
-            android:text="."
+            android:text="-"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
+            android:onClick="operators"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
@@ -181,7 +182,7 @@
             android:text="="
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
+            android:onClick="equals"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
@@ -191,10 +192,9 @@
             android:text="+"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
+            android:onClick="operators"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
-
 
     </androidx.gridlayout.widget.GridLayout>
 

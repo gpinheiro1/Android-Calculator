@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void clean(View view) {
         String screenText = screen.getText().toString();
-        screenText = screenText.substring(0, screenText.length() - 2);
+        screenText = screenText.substring(0, screenText.length() - 1);
         screen.setText(screenText);
     }
 
@@ -49,10 +49,38 @@ public class MainActivity extends AppCompatActivity {
     public void equals(View view) {
         number2 = screen.getText().toString();
         switch (operator) {
-            case "/": divisao(); break;
-            case "*": times(); break;
+            case "/": division(); break;
+            case "*": multiple(); break;
             case "-": minus(); break;
-            case "+": add(); break;
+            case "+": sum(); break;
         }
+    }
+
+    private void sum() {
+        int num1 = Integer.parseInt(number1);
+        int num2 = Integer.parseInt(number2);
+        int result = num1 + num2;
+        screen.setText(result + "");
+    }
+
+    private void multiple() {
+        int num1 = Integer.parseInt(number1);
+        int num2 = Integer.parseInt(number2);
+        int result = num1 * num2;
+        screen.setText(result + "");
+    }
+
+    private void minus() {
+        int num1 = Integer.parseInt(number1);
+        int num2 = Integer.parseInt(number2);
+        int result = num1 - num2;
+        screen.setText(result + "");
+    }
+
+    private void division() {
+        int num1 = Integer.parseInt(number1);
+        int num2 = Integer.parseInt(number2);
+        int result = num1 / num2;
+        screen.setText(result + "");
     }
 }
