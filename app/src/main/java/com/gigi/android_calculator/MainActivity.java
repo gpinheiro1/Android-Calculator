@@ -1,8 +1,6 @@
 package com.gigi.android_calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,9 +33,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clean(View view) {
-        String screenText = screen.getText().toString();
-        screenText = screenText.substring(0, screenText.length() - 1);
-        screen.setText(screenText);
+        if (screen.getText().length() > 0) {
+            String screenText = screen.getText().toString();
+            screenText = screenText.substring(0, screenText.length() - 1);
+            screen.setText(screenText);
+        }
     }
 
     public void operators(View view) {
@@ -54,33 +54,53 @@ public class MainActivity extends AppCompatActivity {
             case "-": minus(); break;
             case "+": sum(); break;
         }
+        number1 = "";
+        number2 = "";
+        operator = "";
+    }
+
+    public void dot(View view) {
+        String number = screen.getText().toString();
+        if (operator.length() == 0) {
+            if (number.length() == 0)
+                number = "0.";
+            else
+                number += ".";
+            screen.setText(number);
+        } else {
+            if (number.length() == 0)
+                number = "0.";
+            else
+                number += ".";
+            screen.setText(number);
+        }
     }
 
     private void sum() {
-        int num1 = Integer.parseInt(number1);
-        int num2 = Integer.parseInt(number2);
-        int result = num1 + num2;
+        double num1 = Double.parseDouble(number1);
+        double num2 = Double.parseDouble(number2);
+        double result = num1 + num2;
         screen.setText(result + "");
     }
 
     private void multiple() {
-        int num1 = Integer.parseInt(number1);
-        int num2 = Integer.parseInt(number2);
-        int result = num1 * num2;
+        double num1 = Double.parseDouble(number1);
+        double num2 = Double.parseDouble(number2);
+        double result = num1 * num2;
         screen.setText(result + "");
     }
 
     private void minus() {
-        int num1 = Integer.parseInt(number1);
-        int num2 = Integer.parseInt(number2);
-        int result = num1 - num2;
+        double num1 = Double.parseDouble(number1);
+        double num2 = Double.parseDouble(number2);
+        double result = num1 - num2;
         screen.setText(result + "");
     }
 
     private void division() {
-        int num1 = Integer.parseInt(number1);
-        int num2 = Integer.parseInt(number2);
-        int result = num1 / num2;
+        double num1 = Double.parseDouble(number1);
+        double num2 = Double.parseDouble(number2);
+        double result = num1 / num2;
         screen.setText(result + "");
     }
 }

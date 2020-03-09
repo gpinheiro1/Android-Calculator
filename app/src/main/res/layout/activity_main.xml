@@ -12,7 +12,7 @@
         android:id="@+id/screen"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="@color/colorPrimary"
         android:textSize="48sp"
         android:textStyle="bold"
         android:gravity="end|bottom"
@@ -25,177 +25,208 @@
 
 
     <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/buttons"
-        android:layout_width="match_parent"
+        android:id="@+id/numbers"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        app:columnCount="4"
+        app:columnCount="3"
         app:rowCount="4"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnMultiple"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/screen">
 
         <Button
             android:id="@+id/btn1"
-            android:background="@android:color/holo_blue_bright"
+            android:background="@color/colorPrimary"
+            android:onClick="numbers"
             android:text="1"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/btn2"
-            android:background="@android:color/holo_blue_bright"
+            android:background="@color/colorPrimary"
+            android:onClick="numbers"
             android:text="2"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/btn3"
-            android:background="@android:color/holo_blue_bright"
+            android:background="@color/colorPrimary"
+            android:onClick="numbers"
             android:text="3"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/btnClear"
-            android:background="@android:color/holo_blue_bright"
-            android:text="AC"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:onClick="clean"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/btn4"
-            android:background="@android:color/holo_blue_bright"
+            android:background="@color/colorPrimary"
+            android:onClick="numbers"
             android:text="4"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/btn5"
-            android:background="@android:color/holo_blue_bright"
+            android:background="@color/colorPrimary"
+            android:onClick="numbers"
             android:text="5"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/btn6"
-            android:background="@android:color/holo_blue_bright"
+            android:background="@color/colorPrimary"
+            android:onClick="numbers"
             android:text="6"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/btnDivisor"
-            android:background="@android:color/holo_blue_bright"
-            android:text="/"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:onClick="operators"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/btn7"
-            android:background="@android:color/holo_blue_bright"
+            android:background="@color/colorPrimary"
+            android:onClick="numbers"
             android:text="7"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/btn8"
-            android:background="@android:color/holo_blue_bright"
+            android:background="@color/colorPrimary"
+            android:onClick="numbers"
             android:text="8"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/btn9"
-            android:background="@android:color/holo_blue_bright"
+            android:background="@color/colorPrimary"
+            android:onClick="numbers"
             android:text="9"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
-            android:id="@+id/btnMultiple"
-            android:background="@android:color/holo_blue_bright"
-            android:text="*"
+            android:id="@+id/btnDot"
+            android:background="@color/colorPrimary"
+            android:onClick="dot"
+            android:text="."
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="operators"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/btn0"
-            android:background="@android:color/holo_blue_bright"
+            android:background="@color/colorPrimary"
+            android:onClick="numbers"
             android:text="0"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="numbers"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/btnMinus"
-            android:background="@android:color/holo_blue_bright"
-            android:text="-"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:onClick="operators"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/btnEquals"
-            android:background="@android:color/holo_blue_bright"
+            android:background="@color/colorPrimary"
+            android:onClick="equals"
             android:text="="
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="equals"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/btnSum"
-            android:background="@android:color/holo_blue_bright"
-            android:text="+"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:onClick="operators"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
     </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        android:onClick="clean"
+        android:text="AC"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnSum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/numbers" />
+
+    <Button
+        android:id="@+id/btnMultiple"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        android:onClick="operators"
+        android:text="*"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnDivisor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnMinus"
+        app:layout_constraintTop_toBottomOf="@+id/btnMinus" />
+
+    <Button
+        android:id="@+id/btnSum"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        android:onClick="operators"
+        android:text="+"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnMinus"
+        app:layout_constraintEnd_toEndOf="@+id/btnClear"
+        app:layout_constraintStart_toStartOf="@+id/btnClear"
+        app:layout_constraintTop_toBottomOf="@+id/btnClear" />
+
+    <Button
+        android:id="@+id/btnMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        android:onClick="operators"
+        android:text="-"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultiple"
+        app:layout_constraintEnd_toEndOf="@+id/btnSum"
+        app:layout_constraintStart_toStartOf="@+id/btnSum"
+        app:layout_constraintTop_toBottomOf="@+id/btnSum" />
+
+    <Button
+        android:id="@+id/btnDivisor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        android:onClick="operators"
+        android:text="/"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnMultiple"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultiple" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
