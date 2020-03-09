@@ -80,27 +80,36 @@ public class MainActivity extends AppCompatActivity {
         double num1 = Double.parseDouble(number1);
         double num2 = Double.parseDouble(number2);
         double result = num1 + num2;
-        screen.setText(result + "");
+        screen.setText(verifyLastDigit(result));
     }
 
     private void multiple() {
         double num1 = Double.parseDouble(number1);
         double num2 = Double.parseDouble(number2);
         double result = num1 * num2;
-        screen.setText(result + "");
+        screen.setText(verifyLastDigit(result));
     }
 
     private void minus() {
         double num1 = Double.parseDouble(number1);
         double num2 = Double.parseDouble(number2);
         double result = num1 - num2;
-        screen.setText(result + "");
+        screen.setText(verifyLastDigit(result));
     }
 
     private void division() {
         double num1 = Double.parseDouble(number1);
         double num2 = Double.parseDouble(number2);
         double result = num1 / num2;
-        screen.setText(result + "");
+        screen.setText(verifyLastDigit(result));
+    }
+
+    private String verifyLastDigit(double result) {
+        String resultString = String.valueOf(result);
+        String stringsFinal = resultString.substring(resultString.length() - 2);
+        if (stringsFinal.equals(".0"))
+            return resultString.substring(0, resultString.length() - 2);
+        else
+            return resultString;
     }
 }
